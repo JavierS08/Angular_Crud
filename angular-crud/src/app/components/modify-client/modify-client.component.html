@@ -1,0 +1,21 @@
+<h1>Editar cliente {{cliente?.codigo}}</h1>
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" ngModel required>
+    </div>
+  <div class="form-group">
+    <label>Ciudad</label>
+    <select class="form-control" name="ciudad" ngModel required>
+        <option value="madrid">Madrid</option>
+        <option value="sevilla">Sevilla</option>
+        <option value="valencia">Valencia</option>
+    </select>
+  </div>
+    <div class="form-group">
+        <label for="facturacion">Facturacion</label>
+        <input type="number" class="form-control" id="facturacion" name="facturacion" ngModel required>
+    </div>
+    <button type="submit" class="btn btn-primary">Modificar</button>
+</form>

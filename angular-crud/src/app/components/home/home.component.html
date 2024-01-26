@@ -1,0 +1,22 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">Id</th>
+    <th scope="col">Nombre</th>
+    <th scope="col">Ciudad</th>
+    <th scope="col">Facturacion</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let cliente of ListarClientes">
+    <th scope="row">{{cliente.codigo}}</th>
+    <td>{{cliente.nombre}}</td>
+    <td>{{cliente.ciudad}}</td>
+    <td>{{cliente.facturacion}}</td>
+    <td><button type="button" class="btn btn-primary" (click)="modificarCliente(cliente.codigo!)">Editar</button></td>
+    <td><button type="button" class="btn btn-danger" (click)="eliminarCliente(cliente.codigo!)">Eliminar</button></td>
+  </tr>
+  </tbody>
+</table>
+
+<button type="button" class="btn btn-primary" (click)="addCliente()">Añadir nuevo cliente</button>
